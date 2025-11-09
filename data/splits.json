@@ -1,0 +1,29 @@
+{
+  "train": {
+    "start": "2012-01-01",
+    "end": "2018-12-31",
+    "start_idx": 0,
+    "end_idx": 1759,
+    "length": 1760,
+    "actual_start": "2012-01-03",
+    "actual_end": "2018-12-31"
+  },
+  "valid": {
+    "start": "2019-01-01",
+    "end": "2021-12-31",
+    "start_idx": 1760,
+    "end_idx": 2516,
+    "length": 757,
+    "actual_start": "2019-01-02",
+    "actual_end": "2021-12-31"
+  },
+  "test": {
+    "start": "2022-01-01",
+    "end": "2025-10-31",
+    "start_idx": 2517,
+    "end_idx": 3477,
+    "length": 961,
+    "actual_start": "2022-01-03",
+    "actual_end": "2025-10-30"
+  }
+}

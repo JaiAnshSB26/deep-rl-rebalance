@@ -1,0 +1,198 @@
+{
+  "config": {
+    "seed": 42,
+    "assets": [
+      "SPY",
+      "QQQ",
+      "IWM",
+      "EFA",
+      "EEM",
+      "TLT",
+      "HYG",
+      "GLD",
+      "DBC"
+    ],
+    "exogenous": [
+      "^VIX"
+    ],
+    "date": {
+      "train": [
+        "2012-01-01",
+        "2018-12-31"
+      ],
+      "valid": [
+        "2019-01-01",
+        "2021-12-31"
+      ],
+      "test": [
+        "2022-01-01",
+        "2025-10-31"
+      ]
+    },
+    "trade": {
+      "execute": "next_open",
+      "cost_bps_per_turnover": 50,
+      "cap_per_asset": 0.3
+    },
+    "reward": {
+      "lambda_risk": 1.0,
+      "alpha_drawdown": 0.0
+    },
+    "features": {
+      "lags": [
+        1,
+        2,
+        5
+      ],
+      "roll_mean": [
+        5,
+        21,
+        63
+      ],
+      "roll_std": [
+        5,
+        21,
+        63
+      ],
+      "rsi": 14,
+      "macd": [
+        12,
+        26,
+        9
+      ],
+      "bb": 20,
+      "atr": 14,
+      "portfolio_vol_window": 21,
+      "cov_pca_components": 3,
+      "cov_window": 63
+    },
+    "rl": {
+      "algo": "PPO",
+      "total_timesteps": 800000,
+      "eval_every_updates": 100,
+      "reward_scale": 100.0,
+      "ppo": {
+        "n_steps": 512,
+        "batch_size": 256,
+        "gamma": 0.99,
+        "gae_lambda": 0.95,
+        "learning_rate": 0.0003,
+        "ent_coef": 0.005,
+        "vf_coef": 0.5,
+        "clip_range": 0.2
+      },
+      "sac": {
+        "buffer_size": 100000,
+        "learning_rate": 0.0003,
+        "gamma": 0.99,
+        "tau": 0.005,
+        "batch_size": 256,
+        "train_freq": 1,
+        "gradient_steps": 1
+      }
+    },
+    "baselines": {
+      "periodic_rebalance_freq": "monthly"
+    }
+  },
+  "metrics_summary": {
+    "Sharpe": {
+      "PPO_RL": 0.32840126438811823,
+      "EW_BuyHold": 0.5491767522982021,
+      "Periodic_Rebal": 0.5071600349119177,
+      "Risk_Parity": 0.4846031180105923,
+      "Momentum": 0.4004315584885444,
+      "MeanVar": 0.28579292125036676
+    },
+    "CAGR": {
+      "PPO_RL": 0.034653508583693204,
+      "EW_BuyHold": 0.061850220636562536,
+      "Periodic_Rebal": 0.0572512204135911,
+      "Risk_Parity": 0.04949304978075442,
+      "Momentum": 0.04284349713064395,
+      "MeanVar": 0.025945348232066845
+    },
+    "Volatility": {
+      "PPO_RL": 0.12911929734895006,
+      "EW_BuyHold": 0.1230478275314676,
+      "Periodic_Rebal": 0.1252104332516295,
+      "Risk_Parity": 0.11279713214306485,
+      "Momentum": 0.12392264823885035,
+      "MeanVar": 0.11125637772521661
+    },
+    "Sortino": {
+      "PPO_RL": 0.4587958422031734,
+      "EW_BuyHold": 0.7853218667985911,
+      "Periodic_Rebal": 0.7274439846244221,
+      "Risk_Parity": 0.6989036016567746,
+      "Momentum": 0.5735152935441202,
+      "MeanVar": 0.4000935450166435
+    },
+    "Calmar": {
+      "PPO_RL": 0.11921224736785553,
+      "EW_BuyHold": 0.29067195464948276,
+      "Periodic_Rebal": 0.2603364918213887,
+      "Risk_Parity": 0.22920001785220573,
+      "Momentum": 0.1849969641749392,
+      "MeanVar": 0.11875268719754291
+    },
+    "Max_Drawdown": {
+      "PPO_RL": 0.2906874867046251,
+      "EW_BuyHold": 0.21278358513149181,
+      "Periodic_Rebal": 0.2199123910252132,
+      "Risk_Parity": 0.2159382456494783,
+      "Momentum": 0.23159027124158663,
+      "MeanVar": 0.2184821988662199
+    },
+    "Tail_Ratio": {
+      "PPO_RL": 0.9174919320135673,
+      "EW_BuyHold": 0.917029304615754,
+      "Periodic_Rebal": 0.9538511674780571,
+      "Risk_Parity": 0.9501462164296993,
+      "Momentum": 0.9394312771939308,
+      "MeanVar": 1.0008227312001592
+    },
+    "Annualized_Turnover": {
+      "PPO_RL": 10.599992053190043,
+      "EW_BuyHold": 0.0,
+      "Periodic_Rebal": 0.14995821941478385,
+      "Risk_Parity": 1.3725344990743338,
+      "Momentum": 3.6048058153516465,
+      "MeanVar": 1.1559943107887956
+    },
+    "Cost_Drag_bps": {
+      "PPO_RL": 264.99980132975105,
+      "EW_BuyHold": 0.0,
+      "Periodic_Rebal": 3.748955485369596,
+      "Risk_Parity": 34.31336247685835,
+      "Momentum": 90.12014538379118,
+      "MeanVar": 28.89985776971989
+    },
+    "HHI": {
+      "PPO_RL": 0.1665601283311844,
+      "EW_BuyHold": 0.11476219215226774,
+      "Periodic_Rebal": 0.11118147744674492,
+      "Risk_Parity": 0.13253682563356436,
+      "Momentum": 0.11549790225498864,
+      "MeanVar": 0.152896094041933
+    }
+  },
+  "dm_test": {
+    "DM_statistic": 1.1828749487168468,
+    "p_value": 0.236858711280155,
+    "mean_loss_diff": 9.988915137004086e-05,
+    "interpretation": "X better than Y"
+  },
+  "bootstrap_ci": {
+    "observed_sharpe": 0.32840126438811823,
+    "ci_lower_95": -0.6453901165497496,
+    "ci_upper_95": 1.410858164356224,
+    "bootstrap_mean": 0.38230716480898763,
+    "bootstrap_std": 0.5282436157406089
+  },
+  "library_versions": {
+    "numpy": "1.24.3",
+    "pandas": "2.0.3",
+    "torch": "2.0.1+cpu"
+  }
+}
