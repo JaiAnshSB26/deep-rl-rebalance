@@ -61,3 +61,11 @@ events.out.tfevents.*
 *.log
 *.tmp
 temp/
+
+# Personal notes and checklists (not for public repo)
+PROJECT_GUIDE.md
+INTERVIEW_FAQ.md
+PRESENTATION_SLIDES.md
+PROJECT_COMPLETION.md
+QUICK_REFERENCE.md
+RESEARCH_REPORT.md
