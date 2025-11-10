@@ -1,0 +1,12 @@
+/* docs/style.css */
+body { max-width: 980px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; }
+header.hero { margin: 0 0 2rem; padding: 1.2rem 1rem; border-radius: 12px; }
+header.hero h1 { margin: 0 0 .25rem; }
+.badges a { text-decoration: none; margin-right: .5rem; }
+figure { text-align: center; }
+figcaption { font-size: .9rem; opacity: .8; }
+@media (prefers-color-scheme: dark) {
+  body { background: #0f1115; color: #e6e6e6; }
+  a { color: #8ab4f8; }
+  header.hero { background: #161a22; }
+}
