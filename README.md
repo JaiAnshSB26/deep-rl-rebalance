@@ -7,7 +7,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-A production-grade deep reinforcement learning framework for learning cost-aware portfolio rebalancing policies using Proximal Policy Optimization (PPO). This system explicitly models transaction costs and compares against strong quantitative baselines including mean-variance optimization, risk parity, and momentum strategies.
+A production-grade deep reinforcement learning project/agent/model for learning cost-aware portfolio rebalancing policies using Proximal Policy Optimization (PPO). This system explicitly models transaction costs and compares against strong quantitative baselines including mean-variance optimization, risk parity, and momentum strategies.
 
 ---
 
