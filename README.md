@@ -1,5 +1,8 @@
 # Deep Reinforcement Learning for Multi-Asset Portfolio Rebalancing
 
+[![Project PDF Report](https://img.shields.io/badge/Research-PDF-red)](RESEARCH_REPORT.pdf)
+
+
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
@@ -8,7 +11,7 @@ A production-grade deep reinforcement learning framework for learning cost-aware
 
 ---
 
-## 🎯 Overview
+## Overview
 
 Traditional portfolio optimization methods suffer from parameter estimation error and fail to adapt to changing market conditions. This project explores whether deep reinforcement learning can learn dynamic, cost-aware rebalancing strategies that account for transaction frictions.
 
@@ -22,7 +25,7 @@ Traditional portfolio optimization methods suffer from parameter estimation erro
 
 ---
 
-## 📊 Results Summary
+## Results Summary
 
 **Test Period**: 2022-2025 (4 years out-of-sample, includes 2022 bear market)
 
@@ -45,7 +48,7 @@ The underperformance during 2022-2025 reflects that static diversification worke
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Installation
 
@@ -128,7 +131,7 @@ deep-rl-rebalance/
 
 ---
 
-## 🔬 Methodology
+## Methodology
 
 ### Environment Design
 
@@ -198,7 +201,7 @@ All baselines use identical transaction cost modeling (25 bps) for fair comparis
 
 ---
 
-## 📈 Evaluation Metrics
+## Evaluation Metrics
 
 ### Performance Metrics
 - **Sharpe Ratio**: Risk-adjusted return (annualized)
@@ -219,7 +222,7 @@ All baselines use identical transaction cost modeling (25 bps) for fair comparis
 
 ---
 
-## 📊 Visualizations
+## Visualizations
 
 The pipeline generates 9 publication-quality figures:
 
@@ -272,7 +275,7 @@ Modify these to experiment with different settings (e.g., increase `lambda_risk`
 
 ---
 
-## 🔬 Research Extensions
+## Research Extensions
 
 Potential directions for future work:
 
@@ -294,9 +297,9 @@ Potential directions for future work:
 
 ---
 
-## 📚 Technical Report
+## Technical Report
 
-For detailed methodology, results, and analysis, see **[RESEARCH_REPORT.md](RESEARCH_REPORT.md)**:
+For detailed methodology, results, and analysis, see **[RESEARCH_REPORT.pdf](RESEARCH_REPORT.pdf)**:
 - Full problem formulation (MDP specification)
 - Feature engineering details
 - Algorithm descriptions (PPO objective, GAE)
@@ -306,7 +309,7 @@ For detailed methodology, results, and analysis, see **[RESEARCH_REPORT.md](RESE
 
 ---
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Data Download Issues
 - Ensure internet connectivity
@@ -327,7 +330,7 @@ Ensure Python 3.11+ is installed.
 
 ---
 
-## 📄 Citation
+## Citation
 
 If you use this code in your research, please cite:
 
@@ -343,13 +346,13 @@ If you use this code in your research, please cite:
 
 ---
 
-## 📜 License
+## License
 
 This project is licensed under the MIT License - see [LICENSE](LICENSE) file for details.
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **Stable-Baselines3** team for excellent RL implementations
 - **yfinance** for accessible market data
@@ -357,7 +360,7 @@ This project is licensed under the MIT License - see [LICENSE](LICENSE) file for
 
 ---
 
-## 📧 Contact
+## Contact
 
 **Author**: Jai Ansh Bindra  
 **GitHub**: [@JaiAnshSB26](https://github.com/JaiAnshSB26)
